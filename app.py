@@ -193,17 +193,10 @@ def reset():
 
 if __name__ == '__main__':
     print("=" * 60)
-    print("🚀 FOOTBALL AI ASSISTANT - COMPLETE EDITION")
-    print("=" * 60)
-    print("\n📊 TOTAL ENDPOINTS: 25+")
-    print("\n✨ Available Features:")
-    print("   • Player stats, transfers, trophies")
-    print("   • Team squads, statistics")
-    print("   • League standings, top scorers/assists")
-    print("   • Match fixtures, H2H, predictions")
-    print("   • Match events, lineups")
-    print("   • Injury information")
-    print("\n📍 Open: http://localhost:5000")
+    print("🚀 FOOTBALL AI ASSISTANT")
     print("=" * 60)
     print()
-    app.run(debug=True, port=5000)
+    
+    # Use environment variable for port (Render requirement)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=False)
